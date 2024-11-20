@@ -55,7 +55,7 @@ export default function Home() {
             </div>
           </div>
 
-          {generateRows()}
+          {/* {generateRows()} */}
         </section>
 
         <section className="footer">
