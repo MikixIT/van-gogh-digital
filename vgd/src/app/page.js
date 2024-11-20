@@ -5,7 +5,58 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ReactLenis } from "lenis/react";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Home() {
+  useEffect(() => {
+    const scrollTriggerSetting = {
+      trigger: ".main",
+      start: "top 25%",
+      toggleActions: "play reverse play reverse",
+    };
+    const leftXValues = [-800, -900, -400];
+    const rightXValues = [800, 900, 400];
+    const leftRotationValues = [-30, -20, -35];
+    const rightRotationValues = [30, 20, 35];
+    const yValues = [100, -150, -400];
+
+    gsap.utils.toArray(".row").forEach((row, index) => {
+      const cardLeft = row.querySelector(".left-c");
+      const cardRight = row.querySelector(".right-c");
+
+      gsap.to(left - c, {
+        x: leftXValues[index],
+        scrollTrigger: {
+          trigger: ".main",
+          start: "top center",
+          end: "150% borrom",
+          scrub: true,
+          onUpdate: (self) => {
+            const progress = self.progress;
+
+            cardLeft.style.transform = `traslateX(${
+              progress * leftXValues[index]
+            }px traslateY${progress * yValues[index]}px rotae(${
+              progress * leftRotationValues[index]
+            }deg))`;
+
+            cardRight.style.transform = `traslateX(${
+              progress * rightXValues[index]
+            }px traslateY${progress * yValues[index]}px rotae(${
+              progress * rightRotationValues[index]
+            }deg))`;
+          },
+        },
+      });
+    });
+
+    gsap.to(".logo", {
+      scale: 1,
+      duration: 0.5,
+      ease: "power1.out",
+    });
+  }, []);
+
   const generateRows = () => {
     const rows = [];
     for (let i = 1; i <= 3; i++) {

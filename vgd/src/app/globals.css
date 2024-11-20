@@ -71,3 +71,65 @@ section {
   overflow: hidden;
   will-change: transform;
 }
+
+.main-content {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: traslate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  overflow: hidden;
+  transform: scale(0);
+}
+
+.copy {
+  margin: 2em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  position: relative;
+  margin: 0.5em 0;
+  width: max-content;
+  height: 28px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.line p {
+  position: relative;
+  font-size: 24px;
+  transform: translateY(30px);
+}
+
+button {
+  position: relative;
+  padding: 1em 2em;
+  font-size: 18px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 8em;
+  background: none;
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+/* Responsive 📱 */
+
+@media (max-width: 990px) {
+  .card {
+    width: 50%;
+    height: 240px;
+  }
+}
