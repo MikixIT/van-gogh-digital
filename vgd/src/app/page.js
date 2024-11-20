@@ -8,14 +8,14 @@ import { ReactLenis } from "lenis/react";
 export default function Home() {
   const generateRows = () => {
     const rows = [];
-    for (let i = 1; 1 <= 3; i++) {
+    for (let i = 1; i <= 3; i++) {
       rows.push(
         <div className="row" key={i}>
           <div className="card left-c">
-            <img src={`/img- ${2 * i - 1}.jpg`} alt="" />
+            <img src={`img-${2 * i - 1}.jpg`} alt="" />
           </div>
           <div className="card right-c">
-            <img src={`/img- ${2 * i}.jpg`} alt="" />
+            <img src={`img-${2 * i}.jpg`} alt="" />
           </div>
         </div>
       );
@@ -55,7 +55,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* {generateRows()} */}
+          {generateRows()}
         </section>
 
         <section className="footer">
