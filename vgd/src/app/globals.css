@@ -11,4 +11,63 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Montserrat", sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  height: 100vh;
+}
+
+.hero .img {
+  width: 50%;
+  aspect-ratio: 1;
+}
+
+.footer {
+  height: 50vh;
+  align-items: flex-start;
+}
+
+.footer a {
+  font-size: 4vw;
+  color: white;
+}
+
+.main {
+  width: 100vw;
+  height: 150vh;
+  flex-direction: column;
+}
+
+.row {
+  position: relative;
+  width: 100vw;
+  margin: 1em 0;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.card {
+  position: relative;
+  width: 40%;
+  height: 360px;
+  border-radius: 0.75em;
+  overflow: hidden;
+  will-change: transform;
 }

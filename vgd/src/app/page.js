@@ -32,7 +32,7 @@ export default function Home() {
         <section className="main">
           <div className="main-content">
             <div className="logo">
-              <img src="/Irises-1889-1.jpg" alt="" />
+              <img src="/Vincent.jpg" alt="" />
             </div>
             <div className="copy">
               <div className="line">
