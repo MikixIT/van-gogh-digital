@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect } from "react";
 import Link from "next/link";
 import gsap from "gsap";
@@ -9,6 +10,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   useEffect(() => {
+    const rows = document.querySelectorAll(".row");
+    console.log("Elementi .row:", rows);
+
     const scrollTriggerSetting = {
       trigger: ".main",
       start: "top 25%",
@@ -24,7 +28,7 @@ export default function Home() {
       const cardLeft = row.querySelector(".left-c");
       const cardRight = row.querySelector(".right-c");
 
-      gsap.to(left - c, {
+      gsap.to(cardLeft, {
         x: leftXValues[index],
         scrollTrigger: {
           trigger: ".main",
@@ -34,17 +38,17 @@ export default function Home() {
           onUpdate: (self) => {
             const progress = self.progress;
 
-            cardLeft.style.transform = `traslateX(${
+            cardLeft.style.transform = `translateX(${
               progress * leftXValues[index]
-            }px traslateY${progress * yValues[index]}px rotae(${
+            }px) translateY(${progress * yValues[index]}px) rotate(${
               progress * leftRotationValues[index]
-            }deg))`;
+            }deg)`;
 
-            cardRight.style.transform = `traslateX(${
+            cardRight.style.transform = `translateX(${
               progress * rightXValues[index]
-            }px traslateY${progress * yValues[index]}px rotae(${
+            }px) translateY(${progress * yValues[index]}px) rotate(${
               progress * rightRotationValues[index]
-            }deg))`;
+            }deg)`;
           },
         },
       });
@@ -54,7 +58,30 @@ export default function Home() {
       scale: 1,
       duration: 0.5,
       ease: "power1.out",
+      scrollTrigger: scrollTriggerSetting,
     });
+
+    gsap.to(".line p", {
+      y: 0,
+      stagger: 0.1,
+      scale: 1,
+      duration: 0.5,
+      ease: "power1.out",
+      scrollTrigger: scrollTriggerSetting,
+    });
+
+    gsap.to("button", {
+      y: 0,
+      opacity: 1,
+      duration: 0.5,
+      delay: 0.35,
+      ease: "power1.out",
+      scrollTrigger: scrollTriggerSetting,
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
   }, []);
 
   const generateRows = () => {
