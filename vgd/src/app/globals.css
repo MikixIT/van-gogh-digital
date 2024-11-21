@@ -29,13 +29,27 @@ section {
   align-items: center;
 }
 
-.hero {
+.img-hero {
+  border-radius: 10%;
+}
+
+.landing-hero {
   height: 100vh;
 }
 
-.hero .img {
+.landing-hero .img {
   width: 50%;
   aspect-ratio: 1;
+}
+
+.name-hero {
+  position: relative;
+  font-size: 45px;
+  font-weight: bold;
+  color: #fff;
+  padding: 1rem;
+  letter-spacing: 2rem;
+  margin-left: 1em;
 }
 
 .footer {
@@ -102,14 +116,14 @@ section {
 .line {
   position: relative;
   margin: 0.5em 0;
-  width: max-content;
+  width: 100%;
   height: 28px;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .line p {
   position: relative;
-  font-size: 24px;
+  font-size: 14px;
   transform: translateY(30px);
 }
 
@@ -133,5 +147,13 @@ button {
     max-width: 990px;
     width: 50%;
     height: 240px;
+  }
+
+  .name-hero {
+    display: none;
+  }
+
+  .line {
+    width: 100%;
   }
 }

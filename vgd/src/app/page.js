@@ -33,7 +33,7 @@ export default function Home() {
         scrollTrigger: {
           trigger: ".main",
           start: "top center",
-          end: "150% borrom",
+          end: "100% bottom",
           scrub: true,
           onUpdate: (self) => {
             const progress = self.progress;
@@ -105,7 +105,8 @@ export default function Home() {
     <>
       <ReactLenis root>
         <section className="landing-hero">
-          <img src="/Vincent.jpg" alt="Vincent Van Gogh" />
+          <h1 className="name-hero">Vincent Van Gogh</h1>
+          <img className="img-hero" src="/Vincent.jpg" alt="Vincent Van Gogh" />
         </section>
         <section className="main">
           <div className="main-content">
@@ -114,22 +115,19 @@ export default function Home() {
             </div>
             <div className="copy">
               <div className="line">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-              </div>
-              <div className="line">
                 <p>
-                  Temporibus harum in debitis eum rem. A natus aperiam autem
-                </p>
-              </div>
-              <div className="line">
-                <p>
-                  Temporibus harum in debitis eum rem. A natus aperiam autem
+                  “It is looking at things for a long time that ripens you and
+                  gives you a deeper meaning.”{" "}
                 </p>
               </div>
             </div>
 
             <div className="button">
-              <button>Colorfull</button>
+              <button>
+                <Link href={"https://www.youtube.com/watch?v=t6NCcZH2Y6w"}>
+                  Enjoy
+                </Link>
+              </button>
             </div>
           </div>
 
@@ -137,7 +135,9 @@ export default function Home() {
         </section>
 
         <section className="footer">
-          <Link href={"#"}>Link here</Link>
+          <Link href={"https://www.vangoghmuseum.nl/en/collection"}>
+            Van Gogh Museum
+          </Link>
         </section>
       </ReactLenis>
     </>
