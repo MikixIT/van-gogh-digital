@@ -15,7 +15,7 @@ export default function Home() {
 
     const scrollTriggerSetting = {
       trigger: ".main",
-      start: "top 25%",
+      start: "top 50%",
       toggleActions: "play reverse play reverse",
     };
     const leftXValues = [-800, -900, -400];
@@ -56,12 +56,31 @@ export default function Home() {
 
     gsap.to(".logo", {
       scale: 1,
-      duration: 0.5,
+      stagger: 0.5,
+      duration: 1.2,
       ease: "power1.out",
       scrollTrigger: scrollTriggerSetting,
     });
 
     gsap.to(".line p", {
+      y: 0,
+      stagger: 2.3,
+      scale: 1,
+      duration: 1.5,
+      ease: "power1.out",
+      scrollTrigger: scrollTriggerSetting,
+    });
+
+    gsap.to("button", {
+      y: 0,
+      opacity: 1,
+      duration: 3.5,
+      delay: 0.35,
+      ease: "bounce.out",
+      scrollTrigger: scrollTriggerSetting,
+    });
+
+    gsap.to(".link", {
       y: 0,
       stagger: 0.1,
       scale: 1,
@@ -70,13 +89,20 @@ export default function Home() {
       scrollTrigger: scrollTriggerSetting,
     });
 
-    gsap.to("button", {
-      y: 0,
+    gsap.to(".footer a", {
+      duration: 10.5,
+      delay: 7,
+      stagger: 10,
       opacity: 1,
-      duration: 0.5,
-      delay: 0.35,
-      ease: "power1.out",
-      scrollTrigger: scrollTriggerSetting,
+      ease: "expo.in",
+      scrollTriggerSetting: scrollTriggerSetting,
+    });
+
+    gsap.to(".name-hero", {
+      duration: 1.5,
+      opacity: 1,
+      ease: "expo.in",
+      scrollTriggerSetting: scrollTriggerSetting,
     });
 
     return () => {
@@ -86,7 +112,7 @@ export default function Home() {
 
   const generateRows = () => {
     const rows = [];
-    for (let i = 1; i <= 3; i++) {
+    for (let i = 1; i <= 4; i++) {
       rows.push(
         <div className="row" key={i}>
           <div className="card left-c">
@@ -117,15 +143,19 @@ export default function Home() {
               <div className="line">
                 <p>
                   “It is looking at things for a long time that ripens you and
-                  gives you a deeper meaning.”{" "}
+                  gives you a deeper meaning.”
+                </p>
+                <p style={{ fontSize: 18, marginTop: 10 }}>
+                  {" "}
+                  - Vincent Van Gogh{" "}
                 </p>
               </div>
             </div>
 
             <div className="button">
               <button>
-                <Link href={"https://www.youtube.com/watch?v=t6NCcZH2Y6w"}>
-                  Enjoy
+                <Link href={"https://youtu.be/t6NCcZH2Y6w?feature=shared&t=22"}>
+                  Audio Vision Experience
                 </Link>
               </button>
             </div>
