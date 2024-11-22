@@ -169,6 +169,10 @@ button a {
     display: none;
   }
 
+  .img-hero {
+    border-radius: 0%;
+  }
+
   .line {
     width: 100%;
   }
