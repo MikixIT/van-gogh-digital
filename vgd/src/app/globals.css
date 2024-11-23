@@ -30,7 +30,7 @@ section {
 }
 
 .img-hero {
-  border-radius: 10%;
+  border-radius: 10% 0% 0% 10%;
 }
 
 .landing-hero {
