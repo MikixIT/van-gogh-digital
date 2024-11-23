@@ -7,8 +7,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ReactLenis } from "lenis/react";
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function Home() {
   useEffect(() => {
     const rows = document.querySelectorAll(".row");
@@ -17,6 +15,8 @@ export default function Home() {
     });
 
     console.log("Elementi .row:", rows);
+
+    gsap.registerPlugin(ScrollTrigger);
 
     const scrollTriggerSetting = {
       trigger: ".main",
@@ -62,7 +62,7 @@ export default function Home() {
     gsap.to(".logo", {
       scale: 1,
       stagger: 0.5,
-      duration: 1.2,
+      duration: 1.7,
       ease: "power1.out",
       scrollTrigger: {
         trigger: ".main",
@@ -75,11 +75,11 @@ export default function Home() {
       y: 0,
       stagger: 2.3,
       scale: 1,
-      duration: 1.5,
+      duration: 2.5,
       ease: "power1.out",
       scrollTrigger: {
         trigger: ".main",
-        start: "top 50%",
+        start: "top 150%",
         toggleActions: "play reverse play reverse",
       },
     });
@@ -88,7 +88,7 @@ export default function Home() {
       y: 0,
       opacity: 1,
       duration: 3.5,
-      delay: 0.35,
+      delay: 0.65,
       ease: "bounce.out",
       scrollTrigger: scrollTriggerSetting,
     });
@@ -103,12 +103,16 @@ export default function Home() {
     });
 
     gsap.to(".footer a", {
-      duration: 10.5,
-      delay: 7,
+      duration: 1.5,
+      delay: 2,
       stagger: 10,
       opacity: 1,
       ease: "expo.in",
-      scrollTriggerSetting: scrollTriggerSetting,
+      scrollTrigger: {
+        trigger: ".footer",
+        start: "top 150%",
+        toggleActions: "play reverse play reverse",
+      },
     });
 
     gsap.to(".name-hero", {
