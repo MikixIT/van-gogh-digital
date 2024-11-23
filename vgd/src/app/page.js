@@ -170,7 +170,9 @@ export default function Home() {
               <button>
                 <Link
                   className="link"
-                  href={"https://youtu.be/t6NCcZH2Y6w?feature=shared&t=22"}
+                  href={
+                    "https://www.youtube.com/embed/t6NCcZH2Y6w?=10?rel=0&autoplay=1"
+                  }
                 >
                   Audio Vision Experience
                 </Link>
