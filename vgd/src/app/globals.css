@@ -78,7 +78,7 @@ section {
   display: flex;
   justify-content: center;
   gap: 2em;
-  z-index: 1;
+  pointer-events: none;
 }
 
 .card {
@@ -146,14 +146,14 @@ button {
   outline: none;
   transform: translateY(0px);
   opacity: 0;
-  z-index: 3;
   pointer-events: auto;
+  z-index: 1;
 }
 
 button a {
   color: #fff;
   text-decoration: none;
-  z-index: 4;
+  z-index: 1;
 }
 
 /* Responsive 📱 */

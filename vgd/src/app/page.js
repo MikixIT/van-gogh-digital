@@ -63,7 +63,11 @@ export default function Home() {
       stagger: 0.5,
       duration: 1.2,
       ease: "power1.out",
-      scrollTrigger: scrollTriggerSetting,
+      scrollTrigger: {
+        trigger: ".main",
+        start: "top 50%",
+        toggleActions: "play reverse play reverse",
+      },
     });
 
     gsap.to(".line p", {
@@ -72,7 +76,11 @@ export default function Home() {
       scale: 1,
       duration: 1.5,
       ease: "power1.out",
-      scrollTrigger: scrollTriggerSetting,
+      scrollTrigger: {
+        trigger: ".main",
+        start: "top 50%",
+        toggleActions: "play reverse play reverse",
+      },
     });
 
     gsap.to("button", {
@@ -160,7 +168,10 @@ export default function Home() {
 
             <div className="button">
               <button>
-                <Link href={"https://youtu.be/t6NCcZH2Y6w?feature=shared&t=22"}>
+                <Link
+                  className="link"
+                  href={"https://youtu.be/t6NCcZH2Y6w?feature=shared&t=22"}
+                >
                   Audio Vision Experience
                 </Link>
               </button>
