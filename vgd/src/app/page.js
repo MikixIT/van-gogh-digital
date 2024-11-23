@@ -11,6 +11,10 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
   useEffect(() => {
     const rows = document.querySelectorAll(".row");
+    rows.forEach((row, index) => {
+      row.classList.add(`row-${index}`);
+    });
+
     console.log("Elementi .row:", rows);
 
     const scrollTriggerSetting = {
@@ -109,6 +113,8 @@ export default function Home() {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
+
+  useEffect(() => {}, []);
 
   const generateRows = () => {
     const rows = [];
