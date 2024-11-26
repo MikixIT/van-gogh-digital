@@ -52,7 +52,8 @@ section {
   margin-left: 1em;
   margin-bottom: 1em;
   opacity: 0;
-  transition: 9.1s ease-in-out;
+  transition: 7.1s ease-in-out;
+  cursor: default;
 }
 
 .name-hero:hover {
@@ -61,7 +62,7 @@ section {
 }
 
 .footer {
-  padding-top: 200px;
+  padding-top: 3em;
   height: 50vh;
   align-items: flex-start;
 }
@@ -101,6 +102,16 @@ section {
   border-radius: 0.75em;
   overflow: hidden;
   will-change: transform;
+  pointer-events: auto;
+}
+
+.card img {
+  transition: 2s ease-in-out;
+}
+
+.card img:hover {
+  transform: scale(1.2);
+  background-color: yellow;
 }
 
 .main-content {
@@ -121,6 +132,14 @@ section {
   overflow: hidden;
   transform: scale(0);
   will-change: transform;
+}
+
+.logo img {
+  transition: transform 3s ease-in-out;
+}
+
+.logo img:hover {
+  transform: scale(1.7);
 }
 
 .copy {
@@ -208,5 +227,21 @@ button a:hover {
   .footer a {
     font-size: 2em;
     text-align: center;
+  }
+
+  .logo img:hover {
+    transform: scale(1.7);
+  }
+
+  .button:hover {
+    color: rgb(214, 207, 207);
+  }
+
+  .name-hero:hover {
+    color: #fff;
+  }
+
+  .footer a:hover {
+    color: rgba(255, 255, 255, 0.343);
   }
 }

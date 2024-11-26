@@ -116,7 +116,7 @@ export default function Home() {
     });
 
     gsap.to(".name-hero", {
-      duration: 1.5,
+      duration: 1.1,
       opacity: 1,
       ease: "expo.in",
       scrollTriggerSetting: scrollTriggerSetting,
