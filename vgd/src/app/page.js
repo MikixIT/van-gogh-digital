@@ -127,8 +127,6 @@ export default function Home() {
     };
   }, []);
 
-  useEffect(() => {}, []);
-
   const generateRows = () => {
     const rows = [];
     for (let i = 1; i <= 4; i++) {
@@ -151,12 +149,16 @@ export default function Home() {
       <ReactLenis root>
         <section className="landing-hero">
           <h1 className="name-hero">Vincent Van Gogh</h1>
-          <img className="img-hero" src="/Vincent.jpg" alt="Vincent Van Gogh" />
+          <img
+            className="img-hero"
+            src="./Vincent.jpg"
+            alt="Vincent Van Gogh"
+          />
         </section>
         <section className="main">
           <div className="main-content">
             <div className="logo">
-              <img src="/Vincent.jpg" alt="" />
+              <img src="./Vincent.jpg" alt="Vincent Van Gogh" />
             </div>
             <div className="copy">
               <div className="line">
@@ -176,7 +178,7 @@ export default function Home() {
                 <Link
                   className="link"
                   href={
-                    "https://www.youtube.com/embed/t6NCcZH2Y6w?=10?rel=0&autoplay=1"
+                    "https://www.youtube.com/embed/t6NCcZH2Y6w?rel=0&autoplay=1&start=10"
                   }
                 >
                   Audio Vision Experience
