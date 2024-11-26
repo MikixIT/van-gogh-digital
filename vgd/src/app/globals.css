@@ -52,6 +52,12 @@ section {
   margin-left: 1em;
   margin-bottom: 1em;
   opacity: 0;
+  transition: 9.1s ease-in-out;
+}
+
+.name-hero:hover {
+  transform: scale(1.1);
+  letter-spacing: 1em;
 }
 
 .footer {
@@ -64,6 +70,12 @@ section {
   font-size: 4em;
   color: white;
   opacity: 0;
+  transition: 0.6s ease-in-out;
+}
+
+.footer a:hover {
+  color: rgba(255, 255, 255, 0.343);
+  letter-spacing: 0.4em;
 }
 
 .main {
