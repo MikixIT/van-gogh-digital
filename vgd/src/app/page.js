@@ -104,13 +104,13 @@ export default function Home() {
 
     gsap.to(".footer a", {
       duration: 1.5,
-      delay: 2,
+      delay: 1,
       stagger: 10,
       opacity: 1,
       ease: "expo.in",
       scrollTrigger: {
         trigger: ".footer",
-        start: "top 150%",
+        start: "top 100%",
         toggleActions: "play reverse play reverse",
       },
     });
