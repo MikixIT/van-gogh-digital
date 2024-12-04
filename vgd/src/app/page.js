@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React from "react";
@@ -133,10 +134,10 @@ export default function Home() {
       rows.push(
         <div className="row" key={i}>
           <div className="card left-c">
-            <img src={`img-${2 * i - 1}.jpg`} alt="" />
+            <img src={`/van-gogh-digital/img-${2 * i - 1}.jpg`} alt="" />
           </div>
           <div className="card right-c">
-            <img src={`img-${2 * i}.jpg`} alt="" />
+            <img src={`/van-gogh-digital/img-${2 * i}.jpg`} alt="" />
           </div>
         </div>
       );
@@ -151,14 +152,14 @@ export default function Home() {
           <h1 className="name-hero">Vincent Van Gogh</h1>
           <img
             className="img-hero"
-            src="./Vincent.jpg"
+            src="/van-gogh-digital/Vincent.jpg"
             alt="Vincent Van Gogh"
           />
         </section>
         <section className="main">
           <div className="main-content">
             <div className="logo">
-              <img src="./Vincent.jpg" alt="Vincent Van Gogh" />
+              <img src="/van-gogh-digital/Vincent.jpg" alt="Vincent Van Gogh" />
             </div>
             <div className="copy">
               <div className="line">

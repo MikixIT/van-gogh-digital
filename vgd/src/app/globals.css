@@ -82,6 +82,7 @@ section {
 .footer a:hover {
   color: rgba(255, 255, 255, 0.343);
   letter-spacing: 0.4em;
+  margin-top: 1em;
 }
 
 .main {

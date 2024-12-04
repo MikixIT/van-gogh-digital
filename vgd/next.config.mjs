@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 // next.config.mjs
 const nextConfig = {
-  trailingSlash: true,
-  assetPrefix: "/van-gogh-digital/",
+  assetPrefix: "/van-gogh-digital",
   basePath: "/van-gogh-digital",
+  output: "export",
 };
 
 export default nextConfig;
