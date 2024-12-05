@@ -3,7 +3,6 @@
 const nextConfig = {
   assetPrefix: "/van-gogh-digital/",
   basePath: "/van-gogh-digital",
-  output: "standalone",
   trailingSlash: true,
 };
 
