@@ -11,6 +11,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Montserrat", sans-serif;
+  scrollbar-width: none;
   background: rgb(40, 40, 40);
   background: radial-gradient(
     circle,
@@ -99,6 +100,7 @@ section {
   justify-content: center;
   gap: 2em;
   pointer-events: none;
+  will-change: transform;
 }
 
 .card {
@@ -109,10 +111,13 @@ section {
   overflow: hidden;
   will-change: transform;
   pointer-events: auto;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .card img {
   transition: 2s ease-in-out;
+  will-change: transform;
 }
 
 .card img:hover {
@@ -137,12 +142,10 @@ section {
   border-radius: 100%;
   overflow: hidden;
   transform: scale(0);
-  will-change: transform;
 }
 
 .logo img {
   transition: transform 3s ease-in-out;
-  will-change: transform;
 }
 
 .logo img:hover {

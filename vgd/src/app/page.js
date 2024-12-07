@@ -121,7 +121,7 @@ export default function Home() {
     gsap.to(".name-hero", {
       duration: 1.1,
       opacity: 1,
-      ease: "expo.in",
+      ease: "linear",
     });
 
     return () => {
@@ -135,10 +135,10 @@ export default function Home() {
       rows.push(
         <div className="row" key={i}>
           <div className="card left-c">
-            <img src={`/img-${2 * i - 1}.jpg`} alt="" />
+            <img src={`/img-${2 * i - 1}-min.jpg`} alt="" />
           </div>
           <div className="card right-c">
-            <img src={`/img-${2 * i}.jpg`} alt="" />
+            <img src={`/img-${2 * i}-min.jpg`} alt="" />
           </div>
         </div>
       );
@@ -151,12 +151,16 @@ export default function Home() {
       <ReactLenis root>
         <section className="landing-hero">
           <h1 className="name-hero">Vincent Van Gogh</h1>
-          <img className="img-hero" src="/Vincent.jpg" alt="Vincent Van Gogh" />
+          <img
+            className="img-hero"
+            src="/Vincent-min.jpg"
+            alt="Vincent Van Gogh"
+          />
         </section>
         <section className="main">
           <div className="main-content">
             <div className="logo">
-              <img src="/Vincent.jpg" alt="Vincent Van Gogh" />
+              <img src="/Vincent-min.jpg" alt="Vincent Van Gogh" />
             </div>
             <div className="copy">
               <div className="line">
