@@ -4,7 +4,7 @@
 import React from "react";
 import { useEffect } from "react";
 import Link from "next/link";
-import gsap from "gsap";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ReactLenis } from "lenis/react";
 
@@ -62,9 +62,10 @@ export default function Home() {
 
     gsap.to(".logo", {
       scale: 1,
+      delay: 0.3,
       stagger: 0.5,
-      duration: 1.7,
-      ease: "power1.out",
+      duration: 0.7,
+      ease: "linear",
       scrollTrigger: {
         trigger: ".main",
         start: "top 50%",
@@ -76,8 +77,9 @@ export default function Home() {
       y: 0,
       stagger: 2.3,
       scale: 1,
-      duration: 2.5,
-      ease: "power1.out",
+      delay: 1.5,
+      duration: 1.5,
+      ease: "linear",
       scrollTrigger: {
         trigger: ".main",
         start: "top 150%",
@@ -88,7 +90,7 @@ export default function Home() {
     gsap.to("button", {
       y: 0,
       opacity: 1,
-      duration: 3.5,
+      duration: 1.5,
       delay: 0.65,
       ease: "bounce.out",
       scrollTrigger: scrollTriggerSetting,
@@ -120,7 +122,6 @@ export default function Home() {
       duration: 1.1,
       opacity: 1,
       ease: "expo.in",
-      scrollTriggerSetting: scrollTriggerSetting,
     });
 
     return () => {
@@ -134,10 +135,10 @@ export default function Home() {
       rows.push(
         <div className="row" key={i}>
           <div className="card left-c">
-            <img src={`/van-gogh-digital/img-${2 * i - 1}.jpg`} alt="" />
+            <img src={`/img-${2 * i - 1}.jpg`} alt="" />
           </div>
           <div className="card right-c">
-            <img src={`/van-gogh-digital/img-${2 * i}.jpg`} alt="" />
+            <img src={`/img-${2 * i}.jpg`} alt="" />
           </div>
         </div>
       );
@@ -150,16 +151,12 @@ export default function Home() {
       <ReactLenis root>
         <section className="landing-hero">
           <h1 className="name-hero">Vincent Van Gogh</h1>
-          <img
-            className="img-hero"
-            src="/van-gogh-digital/Vincent.jpg"
-            alt="Vincent Van Gogh"
-          />
+          <img className="img-hero" src="/Vincent.jpg" alt="Vincent Van Gogh" />
         </section>
         <section className="main">
           <div className="main-content">
             <div className="logo">
-              <img src="/van-gogh-digital/Vincent.jpg" alt="Vincent Van Gogh" />
+              <img src="/Vincent.jpg" alt="Vincent Van Gogh" />
             </div>
             <div className="copy">
               <div className="line">
