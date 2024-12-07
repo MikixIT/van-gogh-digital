@@ -28,7 +28,7 @@ export default function Home() {
     const rightXValues = [800, 900, 400];
     const leftRotationValues = [-30, -20, -35];
     const rightRotationValues = [30, 20, 35];
-    const yValues = [100, -150, -400];
+    const yValues = [100, -130, -400];
 
     gsap.utils.toArray(".row").forEach((row, index) => {
       const cardLeft = row.querySelector(".left-c");
@@ -39,7 +39,6 @@ export default function Home() {
         scrollTrigger: {
           trigger: ".main",
           start: "top center",
-          end: "100% bottom",
           scrub: true,
           onUpdate: (self) => {
             const progress = self.progress;
@@ -64,7 +63,7 @@ export default function Home() {
       scale: 1,
       delay: 0.3,
       stagger: 0.5,
-      duration: 0.7,
+      duration: 1.7,
       ease: "linear",
       scrollTrigger: {
         trigger: ".main",
@@ -78,7 +77,7 @@ export default function Home() {
       stagger: 2.3,
       scale: 1,
       delay: 1.5,
-      duration: 1.5,
+      duration: 2.5,
       ease: "linear",
       scrollTrigger: {
         trigger: ".main",
@@ -135,10 +134,10 @@ export default function Home() {
       rows.push(
         <div className="row" key={i}>
           <div className="card left-c">
-            <img src={`/img-${2 * i - 1}-min.jpg`} alt="" />
+            <img src={`/img-${2 * i - 1}-min.jpg`} alt="" loading="lazy" />
           </div>
           <div className="card right-c">
-            <img src={`/img-${2 * i}-min.jpg`} alt="" />
+            <img src={`/img-${2 * i}-min.jpg`} alt="" loading="lazy" />
           </div>
         </div>
       );
@@ -196,6 +195,28 @@ export default function Home() {
           <Link href={"https://www.vangoghmuseum.nl/en/collection"}>
             Van Gogh Museum
           </Link>
+          <footer className="credits">
+            Made with{" "}
+            <Link
+              href={
+                "https://www.artistsandillustrators.co.uk/how-to/oil-painting/how-to-paint-like-van-gogh/"
+              }
+            >
+              🖌️
+            </Link>{" "}
+            and{" "}
+            <Link
+              href={
+                "https://www.vangoghstudio.com/which-paint-colors-did-van-gogh-use/#:~:text=Vincent%20van%20Gogh%20liked%20to,%2C%20red%20ocher%2C%20raw%20sienna."
+              }
+            >
+              🎨
+            </Link>{" "}
+            by{" "}
+            <Link href={"https://www.linkedin.com/in/michaeltorresdev/"}>
+              Michael Torres
+            </Link>
+          </footer>
         </section>
       </ReactLenis>
     </>
