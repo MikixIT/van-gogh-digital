@@ -303,4 +303,8 @@ button a:hover {
   .credits {
     text-align: center;
   }
+
+  .van-gogh-eyes {
+    display: none;
+  }
 }
