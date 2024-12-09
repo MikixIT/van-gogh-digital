@@ -7,13 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "gh-pages -d out"
+    "export": "next export",
+    "deploy": "next build && gh-pages -d out"
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.25.9",
     "gsap": "^3.12.5",
     "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106"
+    "react-dom": "19.0.0-rc-66 855b96-20241106"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
