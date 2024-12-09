@@ -221,6 +221,7 @@ button a:hover {
   font-size: 0.8em;
   margin: 4em;
   opacity: 1;
+  text-align: center;
 }
 
 .credits a {
@@ -229,6 +230,32 @@ button a:hover {
   opacity: 1;
   text-decoration: none;
   padding: 0.3em;
+}
+
+.van-gogh-eyes {
+  position: absolute;
+  top: 46%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+
+.eye {
+  height: 15px;
+  width: 15px;
+  background-color: rgba(0, 0, 0, 0.34);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.left {
+  position: relative;
+  top: -94px;
+  left: -150px;
+}
+.right {
+  position: relative;
+  top: -92px;
+  right: 15px;
 }
 
 /* Responsive 📱 */
@@ -271,5 +298,9 @@ button a:hover {
 
   .footer a:hover {
     color: rgba(255, 255, 255, 0.343);
+  }
+
+  .credits {
+    text-align: center;
   }
 }
