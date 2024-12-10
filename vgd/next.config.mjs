@@ -3,11 +3,11 @@
 const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
-  assetPrefix: isProd ? "/van-gogh-digital/" : "",
+  assetPrefix: isProd ? "/" : "",
   images: {
     unoptimized: true,
   },
-  basePath: isProd ? "/van-gogh-digital" : "",
+  basePath: "",
   trailingSlash: true,
   output: "export",
 };
