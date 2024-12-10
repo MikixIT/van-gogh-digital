@@ -1,9 +1,7 @@
-/** @type {import('next').NextConfig} */
-
 const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
-  assetPrefix: isProd ? "/" : "",
+  assetPrefix: isProd ? "/_next/" : "",
   images: {
     unoptimized: true,
   },
