@@ -1,0 +1,16 @@
+2:"$Sreact.fragment"
+3:I[5244,[],""]
+4:I[3866,[],""]
+5:I[7033,[],"ClientPageRoot"]
+6:I[9319,["592","static/chunks/c15bf2b0-49893cd8c5c06636.js","512","static/chunks/512-dd89e1325e0a623a.js","974","static/chunks/app/page-2ebe1d528ea7eb3f.js"],"default"]
+9:I[6213,[],"OutletBoundary"]
+b:I[6213,[],"MetadataBoundary"]
+d:I[6213,[],"ViewportBoundary"]
+f:I[4835,[],""]
+1:HL["van-gogh-digital/_next/static/css/a708ae2fdb3c04ce.css","style"]
+0:{"P":null,"b":"KMe_AC3KMFIOwCfbxFmaN","p":"van-gogh-digital","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$2","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"van-gogh-digital/_next/static/css/a708ae2fdb3c04ce.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]}]]}],{"children":["__PAGE__",["$","$2","c",{"children":[["$","$L5",null,{"Component":"$6","searchParams":{},"params":{},"promises":["$@7","$@8"]}],null,["$","$L9",null,{"children":"$La"}]]}],{},null]},null],["$","$2","h",{"children":[null,["$","$2","PmTOc-tQrRTwMTCL90fZN",{"children":[["$","$Lb",null,{"children":"$Lc"}],["$","$Ld",null,{"children":"$Le"}],null]}]]}]]],"m":"$undefined","G":["$f","$undefined"],"s":false,"S":true}
+7:{}
+8:{}
+e:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Van Gogh Experience"}],["$","meta","2",{"name":"description","content":"Van Gogh Experience, in honor of one of the greatest painters of all time "}],["$","link","3",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"256x256"}]]
+a:null
