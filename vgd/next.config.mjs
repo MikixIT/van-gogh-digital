@@ -1,7 +1,5 @@
-const isProd = process.env.NODE_ENV === "production";
-
 const nextConfig = {
-  assetPrefix: "",
+  assetPrefix: "/van-gogh-digital",
   images: {
     unoptimized: true,
   },
