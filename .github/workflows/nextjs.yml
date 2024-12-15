@@ -22,11 +22,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          path: vgd
-
-      - name: Change directory
-        run: |
-          cd vgd
+        path: "van-gogh-digital/vgd"
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -35,7 +31,7 @@ jobs:
           cache: npm
 
       - name: Install deps
-        working-directory: /home/runner/work/van-gogh-digital//vgd
+        working-directory: /home/runner/work/van-gogh-digital/vgd
         run: npm install
 
       - name: Build e Deploy
