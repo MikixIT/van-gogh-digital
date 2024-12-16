@@ -1,10 +1,10 @@
 const nextConfig = {
-  assetPrefix: "/van-gogh-digital/vgd/",
+  assetPrefix: "/van-gogh-digital/",
   images: {
     unoptimized: true,
   },
   output: "export",
-  basePath: "/van-gogh-digital/vgd",
+  basePath: "/van-gogh-digital",
   trailingSlash: true,
 };
 
