@@ -2,7 +2,6 @@
   "name": "vgd",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mikixit.github.io/van-gogh-digital",
   "scripts": {
     "dev": "next dev",
     "start": "next start",
@@ -15,7 +14,8 @@
     "@babel/eslint-parser": "^7.25.9",
     "gsap": "^3.12.5",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@studio-freight/lenis": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
