@@ -1,42 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import Lenis from "lenis";
 import Link from "next/link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ReactLenis } from "lenis/react";
 
 export default function Home() {
   useEffect(() => {
-    const eyeElement = document.querySelector(".van-gogh-eyes");
-    const leftEye = document.querySelector(".left");
-    const rightEye = document.querySelector(".right");
-    const eyeRect = eyeElement.getBoundingClientRect();
-    const leftEyeRect = leftEye.getBoundingClientRect();
-    const rightEyeRect = rightEye.getBoundingClientRect();
-
-    const maxX = 6;
-    const maxY = 6;
-
-    const animateEyes = (event) => {
-      const mousePos = { x: event.clientX, y: event.clientY };
-      const angle = Math.atan2(
-        mousePos.y - eyeRect.top,
-        mousePos.x - eyeRect.left
-      );
-      const distanceX = Math.min(maxX, Math.max(-maxX, Math.cos(angle) * maxX));
-      const distanceY = Math.min(maxY, Math.max(-maxY, Math.sin(angle) * maxY));
-
-      leftEye.style.transform = `translate(${distanceX}px, ${distanceY}px)`;
-      rightEye.style.transform = `translate(${distanceX}px, ${distanceY}px)`;
-    };
-
-    document.addEventListener("mousemove", animateEyes);
-
-    //// 🛑
-
     const rows = document.querySelectorAll(".row");
     rows.forEach((row, index) => {
       row.classList.add(`row-${index}`);
@@ -44,13 +16,28 @@ export default function Home() {
 
     console.log("Elementi .row:", rows);
 
+    // Inizializza Lenis
+    const lenis = new Lenis({
+      smooth: true,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    // Inizializza GSAP ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
 
+    // Configurazioni GSAP
     const scrollTriggerSetting = {
       trigger: ".main",
       start: "top 50%",
       toggleActions: "play reverse play reverse",
     };
+
     const leftXValues = [-800, -900, -400];
     const rightXValues = [800, 900, 400];
     const leftRotationValues = [-30, -20, -35];
@@ -151,6 +138,8 @@ export default function Home() {
     });
 
     return () => {
+      // Pulisci Lenis e ScrollTrigger
+      lenis.destroy();
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
@@ -182,85 +171,79 @@ export default function Home() {
 
   return (
     <>
-      <ReactLenis root>
-        <section className="landing-hero">
-          <h1 className="name-hero">Vincent Van Gogh</h1>
-          <img
-            className="img-hero"
-            src="/van-gogh-digital/Vincent-min.jpg"
-            alt="Vincent Van Gogh"
-          />
-          <div className="van-gogh-eyes">
-            <span className="left eye"></span>
-            <span className="right eye"></span>
+      <section className="landing-hero">
+        <h1 className="name-hero">Vincent Van Gogh</h1>
+        <img
+          className="img-hero"
+          src="/van-gogh-digital/Vincent-min.jpg"
+          alt="Vincent Van Gogh"
+        />
+      </section>
+      <section className="main">
+        <div className="main-content">
+          <div className="logo">
+            <img
+              src="/van-gogh-digital/Vincent-min.jpg"
+              alt="Vincent Van Gogh"
+            />
           </div>
-        </section>
-        <section className="main">
-          <div className="main-content">
-            <div className="logo">
-              <img
-                src="/van-gogh-digital/Vincent-min.jpg"
-                alt="Vincent Van Gogh"
-              />
-            </div>
-            <div className="copy">
-              <div className="line">
-                <p>
-                  “It is looking at things for a long time that ripens you and
-                  gives you a deeper meaning.”
-                </p>
-                <p style={{ fontSize: 18, marginTop: 10 }}>
-                  {" "}
-                  - Vincent Van Gogh{" "}
-                </p>
-              </div>
-            </div>
-
-            <div className="button">
-              <button>
-                <Link
-                  className="link"
-                  href={
-                    "https://www.youtube.com/embed/t6NCcZH2Y6w?rel=0&autoplay=1&start=10"
-                  }
-                >
-                  Audio Vision Experience
-                </Link>
-              </button>
+          <div className="copy">
+            <div className="line">
+              <p>
+                “It is looking at things for a long time that ripens you and
+                gives you a deeper meaning.”
+              </p>
+              <p style={{ fontSize: 18, marginTop: 10 }}>
+                {" "}
+                - Vincent Van Gogh{" "}
+              </p>
             </div>
           </div>
 
-          {generateRows()}
-        </section>
+          <div className="button">
+            <button>
+              <Link
+                className="link"
+                href={
+                  "https://www.youtube.com/embed/t6NCcZH2Y6w?rel=0&autoplay=1&start=10"
+                }
+              >
+                Audio Vision Experience
+              </Link>
+            </button>
+          </div>
+        </div>
 
-        <section className="footer">
-          <Link href={"https://www.vangoghmuseum.nl/en/collection"}>
-            Van Gogh Museum
+        {generateRows()}
+      </section>
+
+      <section className="footer">
+        <Link href={"https://www.vangoghmuseum.nl/en/collection"}>
+          Van Gogh Museum
+        </Link>
+        <footer className="credits">
+          Made with{" "}
+          <Link
+            href={
+              "https://www.artistsandillustrators.co.uk/how-to/oil-painting/how-to-paint-like-van-gogh/"
+            }
+          >
+            🖌️
+          </Link>{" "}
+          and{" "}
+          <Link
+            href={
+              "https://www.vangoghstudio.com/which-paint-colors-did-van-gogh-use/#:~:text=Vincent%20van%20Gogh%20liked%20to,%2C%20red%20ocher%2C%20raw%20sienna."
+            }
+          >
+            🎨
+          </Link>{" "}
+          by{" "}
+          <Link href={"https://www.linkedin.com/in/michaeltorresdev/"}>
+            Michael Torres
           </Link>
-          <footer className="credits">
-            Made with{" "}
-            <Link
-              href={
-                "https://www.artistsandillustrators.co.uk/how-to/oil-painting/how-to-paint-like-van-gogh/"
-              }
-            >
-              🖌️
-            </Link>{" "}
-            and{" "}
-            <Link
-              href={
-                "https://www.vangoghstudio.com/which-paint-colors-did-van-gogh-use/#:~:text=Vincent%20van%20Gogh%20liked%20to,%2C%20red%20ocher%2C%20raw%20sienna."
-              }
-            >
-              🎨
-            </Link>{" "}
-            by{" "}
-            <Link href={"https://www.linkedin.com/in/michaeltorresdev/"}>
-              Michael Torres
-            </Link>
-          </footer>
-        </section>
-      </ReactLenis>
+        </footer>
+      </section>
     </>
   );
 }
