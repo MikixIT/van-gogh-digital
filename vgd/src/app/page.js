@@ -150,18 +150,10 @@ export default function Home() {
       rows.push(
         <div className="row" key={i}>
           <div className="card left-c">
-            <img
-              src={`/van-gogh-digital/img-${2 * i - 1}-min.jpg`}
-              alt=""
-              loading="lazy"
-            />
+            <img src={`/img-${2 * i - 1}-min.jpg`} alt="" loading="lazy" />
           </div>
           <div className="card right-c">
-            <img
-              src={`/van-gogh-digital/img-${2 * i}-min.jpg`}
-              alt=""
-              loading="lazy"
-            />
+            <img src={`/img-${2 * i}-min.jpg`} alt="" loading="lazy" />
           </div>
         </div>
       );
@@ -175,17 +167,14 @@ export default function Home() {
         <h1 className="name-hero">Vincent Van Gogh</h1>
         <img
           className="img-hero"
-          src="/van-gogh-digital/Vincent-min.jpg"
+          src="/Vincent-min.jpg"
           alt="Vincent Van Gogh"
         />
       </section>
       <section className="main">
         <div className="main-content">
           <div className="logo">
-            <img
-              src="/van-gogh-digital/Vincent-min.jpg"
-              alt="Vincent Van Gogh"
-            />
+            <img src="/Vincent-min.jpg" alt="Vincent Van Gogh" />
           </div>
           <div className="copy">
             <div className="line">

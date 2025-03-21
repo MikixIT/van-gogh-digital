@@ -190,7 +190,7 @@
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("b16b2c2b914df48b")
+/******/ 		__webpack_require__.h = () => ("ae1fc8346bf7686e")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
@@ -697,7 +697,7 @@
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "/van-gogh-digital/_next/";
+/******/ 		__webpack_require__.p = "/_next/";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/react refresh */
