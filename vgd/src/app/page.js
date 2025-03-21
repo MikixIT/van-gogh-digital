@@ -10,6 +10,40 @@ import { ReactLenis } from "lenis/react";
 
 export default function Home() {
   useEffect(() => {
+    const eyeElement = document.querySelector(".van-gogh-eyes");
+    const leftEye = document.querySelector(".left");
+    const rightEye = document.querySelector(".right");
+    const eyeRect = eyeElement.getBoundingClientRect();
+    const leftEyeRect = leftEye.getBoundingClientRect();
+    const rightEyeRect = rightEye.getBoundingClientRect();
+
+    const maxX = 6;
+    const maxY = 6;
+
+    const animateEyes = (event) => {
+      const mousePos = { x: event.clientX, y: event.clientY };
+      const angle = Math.atan2(
+        mousePos.y - eyeRect.top,
+        mousePos.x - eyeRect.left
+      );
+      const distanceX = Math.min(maxX, Math.max(-maxX, Math.cos(angle) * maxX));
+      const distanceY = Math.min(maxY, Math.max(-maxY, Math.sin(angle) * maxY));
+
+      leftEye.style.transform = `translate(${distanceX}px, ${distanceY}px)`;
+      rightEye.style.transform = `translate(${distanceX}px, ${distanceY}px)`;
+    };
+
+    document.addEventListener("mousemove", animateEyes);
+
+    //// 🛑
+
+    const rows = document.querySelectorAll(".row");
+    rows.forEach((row, index) => {
+      row.classList.add(`row-${index}`);
+    });
+
+    console.log("Elementi .row:", rows);
+
     gsap.registerPlugin(ScrollTrigger);
 
     const scrollTriggerSetting = {
@@ -156,6 +190,10 @@ export default function Home() {
             src="/van-gogh-digital/Vincent-min.jpg"
             alt="Vincent Van Gogh"
           />
+          <div className="van-gogh-eyes">
+            <span className="left eye"></span>
+            <span className="right eye"></span>
+          </div>
         </section>
         <section className="main">
           <div className="main-content">
